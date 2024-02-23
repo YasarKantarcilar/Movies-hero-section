@@ -171,7 +171,7 @@
     <img
       src={bgImage}
       alt="banner"
-      class="w-1/3 h-screen sr-only md:not-sr-only -z-50 -scale-x-100 object-cover"
+      class="w-1/3 h-screen md:flex hidden -z-50 -scale-x-100 object-cover"
     />
     <img
       src={bgImage}
