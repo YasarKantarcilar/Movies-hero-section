@@ -113,10 +113,10 @@
 </script>
 
 <div
-  class="w-full bg-gradient-to-r from-black from-15% to-transparent h-screen relative pt-[5%]"
+  class="w-full from-black via-transparent to-black bg-gradient-to-b md:bg-gradient-to-r md:from-black from-15% md:to-transparent h-screen relative pt-[5%]"
 >
   <div
-    class="w-1/2 h-1/2 flex pl-[10%] gap-5 flex-col items-start text-white justify-start"
+    class="w-full md:w-1/2 h-1/2 flex pl-[5%] md:pl-[10%] gap-5 flex-col items-start text-white justify-start"
   >
     <p class="text-5xl font-bold">{movieName}</p>
     <div class="flex w-full h-8 gap-4 justify-start items-start">
@@ -144,7 +144,7 @@
     </div>
   </div>
   <div
-    class="w-screen flex-nowrap overflow-x-scroll px-[10%] h-1/2 flex justify-start items-center z-50 gap-8"
+    class="w-screen flex-nowrap overflow-x-scroll px-[8%] md:px-[10%] h-1/2 flex justify-start items-center z-50 gap-10 md:gap-8"
   >
     {#each movies as movie, index (index)}
       <div
@@ -153,7 +153,7 @@
           bgImage = movie.image;
           movieName = movie.title;
         }}
-        class="h-[70%] aspect-[8/12] bg-white rounded-lg"
+        class="h-[50%] md:h-[70%] aspect-[8/12] bg-white rounded-lg"
       >
         <img
           alt="movie"
@@ -171,12 +171,12 @@
     <img
       src={bgImage}
       alt="banner"
-      class="w-1/3 h-screen -z-50 -scale-x-100 object-cover"
+      class="w-1/3 h-screen sr-only md:not-sr-only -z-50 -scale-x-100 object-cover"
     />
     <img
       src={bgImage}
       alt="moviebanner"
-      class="w-2/3 h-auto -z-50 object-cover"
+      class="w-full md:w-2/3 h-auto -z-50 object-cover"
     />
   </div>
 </div>
